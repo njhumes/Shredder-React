@@ -1,3 +1,25 @@
+# Shredder
+A Snowboarding/Skiing app that allows users to rate &amp; review their favorite runs! Using data from a snow report API allows them to see current and upcoming snow conditions at their favorite mountains.
+
+MVP:
+Allow users to create a profile and select trails as their 'favorite' or rank them.
+Use a weather/OnTheSnow API to display the current snow conditions and upcoming forecast
+Upload Keystone's trails into the backend myself.
+Display a list of all the trails with the trail map.
+
+
+Bonus:
+Allow users to upload their own trails
+Have a Resort/Mountain model that houses all the trails for that mountain
+Upload multiple resorts and all their trails on the backend
+Allow users to leave reviews on the trails
+Upload pictures on the trail's page
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
