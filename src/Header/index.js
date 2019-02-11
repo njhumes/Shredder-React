@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const header = () => {
+const Header = () => {
     return (
         <header>
             <Link to='/trails'>Trails</Link>
@@ -9,3 +9,4 @@ const header = () => {
         </header>
     )
 }
+export default Header;

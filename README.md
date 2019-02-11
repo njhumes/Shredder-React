@@ -1,10 +1,10 @@
 # Shredder
-A Snowboarding/Skiing app that allows users to rate &amp; review their favorite runs! Using data from a snow report API allows them to see current and upcoming snow conditions at their favorite mountains. <br>
+A Snowboarding/Skiing app that allows users to rate &amp; review their favorite runs. Using data from a snow report API allows them to see current and upcoming snow conditions at their favorite mountains. <br>
 
 MVP:<br>
 Allow users to create a profile and select trails as their 'favorite' or rank them.<br>
 Use a weather/OnTheSnow API to display the current snow conditions and upcoming forecast<br>
-Upload Keystone's trails into the backend myself.<br>
+Upload a resorts trails into the backend myself.<br>
 Display a list of all the trails with the trail map.<br><br>
 
 
