@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import User from '../UserContainer/User';
 import Register from './Register';
+import TrailContainer from '../TrailContainer';
 
 // Make a register/login button using browser router and link
 
@@ -100,6 +101,7 @@ class Login extends Component {
                 this.setState({
                     logged: true, ...parsedLogin.info
                 })
+                this.props.history.push('/trails');
                 // console.log(this.state, 'this.state after login')
             }
             // console.log(parsedLogin.info, 'parsedLogin.info');
@@ -111,9 +113,10 @@ class Login extends Component {
 
     render() {
         return (
-            // if logged in, show User container, else, show reg/login 
+            
+            
            this.state.logged ? <User userInfo={this.state} showUserModal={this.showUserModal} showEditModal={this.showEditModal} handleChange={this.handleChange} handleUserUpdate={this.handleUserUpdate} deleteUser={this.deleteUser}/> : 
-            <div> 
+                <div>
                 <Register />
                 <form onSubmit={this.handleLogin}>
                    Login:<br />
@@ -127,7 +130,8 @@ class Login extends Component {
                    </label>
                    <input type='Submit' />
                </form>
-            </div>
+                </div>
+            
         )
     }
 }

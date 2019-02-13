@@ -31,10 +31,15 @@ class TrailContainer extends Component {
 
 
     render(){
-
+        // list of resorts with links to their page?
+        console.log(this.props.username, 'trail container propsusername');
+        console.log(this.state, 'trail container this.state')
         return (
             <div>
-                Trail Container
+                <h1>Trail Contaier </h1>
+                <p> Hello! {this.props.username}</p>
+                <p>Loggedin? {this.props.logged}</p>
+                <h2>Keystone Resort</h2>    
                 <TrailList trails={this.state.trails} />
             </div>
         )

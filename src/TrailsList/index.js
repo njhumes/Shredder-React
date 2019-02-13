@@ -1,14 +1,9 @@
 import React from 'react';
+import SnowReport from '../SnowReport';
 
 
 const TrailList = (props) => {
-    // console.log(props, 'props');
-    // console.log(props.trails, 'props.trails');
-    // console.log(props.trails[0].name, 'props.trails');
-    // console.log(props.data, 'props.data');
-    // console.log(props.trails.data, 'props.trails.data');
     const allTrails = props.trails.map((trail) => {
-
         return (
             <li key={trail._id}>
                 Name: {trail.name}<br/>
@@ -16,16 +11,15 @@ const TrailList = (props) => {
                 Difficulty: {trail.difficulty}<br/><br/>
             </li>
         )
-
-
     })
 
 
     return (
         <div>
-            Trail List
+           Keystone Trail List Page
             <ul>
                 {allTrails}
+                <SnowReport />
             </ul>
 
         </div>
