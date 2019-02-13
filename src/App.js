@@ -7,9 +7,10 @@ import Register from './Authentication/Register'
 
 class App extends Component {
   render() {
+
+
     return (
       <div className="App">
-          <Register />
           <Login />
           <TrailContainer />
 

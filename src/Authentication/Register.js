@@ -7,6 +7,9 @@ class Register extends Component {
             email: '',
             username: '',
             password: '',
+            firstName: '',
+            lastName: '',
+            localMountain: '',
         }
     }
     handleChange = (e) => {
@@ -52,6 +55,18 @@ class Register extends Component {
                 <label>
                     Password:
                     <input type='password' name='password' onChange={this.handleChange} />
+                </label>
+                <label>
+                    First Name:
+                    <input type='text' name='firstName' onChange={this.handleChange} />
+                </label>
+                <label>
+                    Last Name:
+                    <input type='text' name='lastName' onChange={this.handleChange} />
+                </label>
+                <label>
+                    Local Resort:
+                    <input type='text' name='localMountain' onChange={this.handleChange} />
                 </label>
                 <input type='Submit' />
             </form>

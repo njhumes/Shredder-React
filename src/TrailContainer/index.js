@@ -19,7 +19,7 @@ class TrailContainer extends Component {
             const apiResponse = await fetch(process.env.REACT_APP_API_URL);
             // console.log(apiResponse, '===== apiResponse');
             const parsedTrails = await apiResponse.json();
-            console.log(parsedTrails, '~~~ parsedTrails')
+            // console.log(parsedTrails, '~~~ parsedTrails')
             this.setState({
                 trails: parsedTrails.data
             })
