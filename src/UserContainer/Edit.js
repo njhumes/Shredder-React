@@ -17,6 +17,7 @@ const Edit = (props) => {
                 <input type='text' name='favoriteTrails' onChange={props.handleChange} value={props.editUser.favoriteTrails} />
                 <input type='Submit' />
             </form>
+            <button onClick={props.deleteUser}>Delete Profile</button>
         </div>
     )
 }

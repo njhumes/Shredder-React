@@ -22,7 +22,7 @@ const User = (props) => {
             <button onClick={props.showEditModal.bind(null)}>Edit</button>
 
             {props.userInfo.showUserModal ? <Profile showUser={props.userInfo} /> : null}
-            {props.userInfo.showEditModal ? <Edit editUser={props.userInfo} handleChange={props.handleChange.bind(this)} handleUserUpdate={props.handleUserUpdate.bind(this)} /> : null}
+            {props.userInfo.showEditModal ? <Edit editUser={props.userInfo} handleChange={props.handleChange.bind(this)} handleUserUpdate={props.handleUserUpdate.bind(this)} deleteUser={props.deleteUser.bind(this)} /> : null}
             
         </div>
     )

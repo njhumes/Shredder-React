@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import User from '../UserContainer/User';
 import Register from './Register';
 
+// Make a register/login button using browser router and link
+
 class Login extends Component {
     constructor(){
         super();
@@ -20,17 +22,7 @@ class Login extends Component {
             
         }
     }
-// show user modal and a show edit modal? you click the show user modal to display the user's info
-// from there, could click the edit button to display the edit modal? 
 
-// make a shoe user page? might just have it as on the User componenet
-// Could also just be a part of the edit modal? 
-
-// make a show edit modal function to pass into the Edit component 
-// have a handle edit form function to pass into the edit componenet
-// make a delete user function to pass into the edit component
-
-// this allows users to toggle their show profile or edit modals
     showUserModal = () => {
         this.setState({
             showUserModal: !this.state.showUserModal
@@ -67,6 +59,20 @@ class Login extends Component {
         } catch(err) {
             console.log(err);
         }
+    }
+
+    deleteUser = async (e) => {
+        const deleteResponse = await fetch('http://localhost:9000/user/' + this.state._id, {
+            method: 'DELETE',
+            credentials: 'include'
+        })
+        const deleted = await deleteResponse.json();
+        console.log(deleted.data)
+        this.setState({
+            showEditModal: false,
+            logged: false
+        })
+
     }
 
     handleLogin = async (e) => {
@@ -106,7 +112,7 @@ class Login extends Component {
     render() {
         return (
             // if logged in, show User container, else, show reg/login 
-           this.state.logged ? <User userInfo={this.state} showUserModal={this.showUserModal} showEditModal={this.showEditModal} handleChange={this.handleChange} handleUserUpdate={this.handleUserUpdate} /> : 
+           this.state.logged ? <User userInfo={this.state} showUserModal={this.showUserModal} showEditModal={this.showEditModal} handleChange={this.handleChange} handleUserUpdate={this.handleUserUpdate} deleteUser={this.deleteUser}/> : 
             <div> 
                 <Register />
                 <form onSubmit={this.handleLogin}>
