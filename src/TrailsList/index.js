@@ -9,9 +9,9 @@ const TrailList = (props) => {
             
                         <ListGroup className='trail-block'>
                             <ListGroupItem key={trail._id}>
-                                Name: {trail.name}<br />
-                                Resort: {trail.resort}<br />
-                                Difficulty: {trail.difficulty}<br />
+                                <strong>Name:</strong> {trail.name}<br />
+                                <strong>Resort:</strong> {trail.resort}<br />
+                                <strong>Difficulty:</strong> {trail.difficulty}<br />
                             </ListGroupItem>
                         </ListGroup>
         )
