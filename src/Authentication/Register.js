@@ -47,28 +47,28 @@ class Register extends Component {
                 <label>
                     Email:
                     <input type='text' name='email' onChange={this.handleChange} />
-                </label>
+                </label><br/>
                 <label>
                     Username:
                     <input type='text' name='username' onChange={this.handleChange} />
-                </label>
+                </label><br />
                 <label>
                     Password:
                     <input type='password' name='password' onChange={this.handleChange} />
-                </label>
+                </label><br />
                 <label>
                     First Name:
                     <input type='text' name='firstName' onChange={this.handleChange} />
-                </label>
+                </label><br />
                 <label>
                     Last Name:
                     <input type='text' name='lastName' onChange={this.handleChange} />
-                </label>
+                </label><br />
                 <label>
                     Local Resort:
                     <input type='text' name='localMountain' onChange={this.handleChange} />
-                </label>
-                <input type='Submit' />
+                </label><br />
+                <input type='Submit' /><br /><br />
             </form>
         )
     }

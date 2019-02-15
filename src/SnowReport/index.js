@@ -9,16 +9,19 @@ class SnowReport extends Component{
             loaded: false
         }
     }
+    componentDidMount() {
+        this.getSnowReport();
+    }
     getSnowReport = async () => {
         try {
-            const response = await fetch('http://api.weatherunlocked.com/api/forecast/us.80435?app_id=5c214a8b&app_key=60f1597629eab2cb79dd3f818b777ea7', {
-                headers: {
-                    'Accept': 'application/json'
-                }
+            let response = await fetch('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/3b1aace2c20e4dfa633787a8d4c203eb/39.608665,-105.943664', {
+                // headers: {
+                //     'Accept': 'application/json'
+                // }
             })
-            const snowReportResponse = await response.json();
+            let snowReportResponse = await response.json();
             // console.log(response, 'response');
-            // console.log(snowReportResponse, 'json response')
+            console.log(snowReportResponse, 'json response')
             this.setState({
                 snowReport: snowReportResponse,
                 loaded: true
@@ -29,13 +32,11 @@ class SnowReport extends Component{
         }
         
     }
-    componentDidMount(){
-        this.getSnowReport();
-    }
+   
     render(){
 
         return (
-            <div>Three Day Weather Forecast<br/>
+            <div>
                 {this.state.loaded ? <ThreeDay snowReport={this.state.snowReport}/> : 'Weather Loading' } 
             </div>
         )

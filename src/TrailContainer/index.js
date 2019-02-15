@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TrailList from '../TrailsList';
+import { withRouter } from 'react-router-dom'
 require('dotenv').config();
 
 class TrailContainer extends Component {
@@ -36,10 +37,8 @@ class TrailContainer extends Component {
         console.log(this.state, 'trail container this.state')
         return (
             <div>
-                <h1>Trail Contaier </h1>
-                <p> Hello! {this.props.username}</p>
-                <p>Loggedin? {this.props.logged}</p>
-                <h2>Keystone Resort</h2>    
+                <h1 className='title-heading'>Shredder</h1>
+                   
                 <TrailList trails={this.state.trails} />
             </div>
         )
@@ -47,4 +46,4 @@ class TrailContainer extends Component {
 }
 
 
-export default TrailContainer;
+export default withRouter(TrailContainer);

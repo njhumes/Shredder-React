@@ -1,7 +1,7 @@
 import React from 'react';
 import Edit from './Edit';
 import Profile from './Profile';
-
+import { withRouter } from 'react-router-dom'
 // Link to Profile page (user show page) 
 // On profile page, edit and delete
 // pass the show edit modal as a props
@@ -9,7 +9,7 @@ import Profile from './Profile';
 
 // if check if the showModal is false, then don't show the Edit componenet
 const User = (props) => {
-    console.log(props.handleChange.bind(this), 'bind(this)')
+    // console.log(props.handleChange.bind(this), 'bind(this)')
     // console.log(props, 'usercomponenet props')
     // console.log(props.handleChange, 'props.handleChange');
     // console.log(props.handleChange())
@@ -28,4 +28,4 @@ const User = (props) => {
     )
 }
 
-export default User;
+export default withRouter(User);
