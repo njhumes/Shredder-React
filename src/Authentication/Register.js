@@ -19,7 +19,7 @@ class Register extends Component {
     handleRegistration = async (e) => {
         e.preventDefault();
         try {
-            const registrationResponse = await fetch(process.env.REACT_APP_BACKEND + 'register', {
+            const registrationResponse = await fetch(process.env.REACT_APP_BACKEND + 'user/register', {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify(this.state),

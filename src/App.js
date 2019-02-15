@@ -82,7 +82,7 @@ class App extends Component {
     // console.log('handle login button works');
     try {
       console.log('handle login inside the try');
-      const loginResponse = await fetch(process.env.REACT_APP_BACKEND + 'login', {
+      const loginResponse = await fetch(process.env.REACT_APP_BACKEND + 'user/login', {
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify(this.state),
