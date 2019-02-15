@@ -17,7 +17,7 @@ class TrailContainer extends Component {
     getTrails = async () => {
         try {
             // this will get the trails from the express api
-            const apiResponse = await fetch(process.env.REACT_APP_API_URL);
+            const apiResponse = await fetch(process.env.REACT_APP_BACKEND + 'trails');
             // console.log(apiResponse, '===== apiResponse');
             const parsedTrails = await apiResponse.json();
             // console.log(parsedTrails, '~~~ parsedTrails')

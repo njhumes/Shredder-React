@@ -43,7 +43,7 @@ class App extends Component {
   handleUserUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(process.env.REACT_APP_USERSLASH_API_URL + this.state._id, {
+      const response = await fetch(process.env.REACT_APP_BACKEND + this.state._id, {
         method: 'PUT',
         credentials: 'include',
         body: JSON.stringify(this.state),
@@ -64,7 +64,7 @@ class App extends Component {
   }
 
   deleteUser = async (e) => {
-    const deleteResponse = await fetch(process.env.REACT_APP_USERSLASH_API_URL + this.state._id, {
+    const deleteResponse = await fetch(process.env.REACT_APP_BACKEND + this.state._id, {
       method: 'DELETE',
       credentials: 'include'
     })
@@ -82,7 +82,7 @@ class App extends Component {
     // console.log('handle login button works');
     try {
       console.log('handle login inside the try');
-      const loginResponse = await fetch(process.env.REACT_APP_USERSLASH_API_URL + 'login', {
+      const loginResponse = await fetch(process.env.REACT_APP_BACKEND + 'login', {
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify(this.state),
