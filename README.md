@@ -7,13 +7,13 @@ Scope: <br>
         - Add favorites/rating trail feature<br>
         - Allow users to upload their own trails<br>
             - Add categories to trail model<br>
-                - groomers<br>
+                <!-- - groomers<br>
                 - off-piste backcountry<br>
                 - hikable from resort<br>
                 - bowls<br>
                 - tree run<br>
                 - moguls<br>
-                - terrain park<br>
+                - terrain park<br> -->
         - Allow users to display results based on trail category at each resort<br>
         - Expand the weather forecast to display more days of the week possibly with more data<br>
         - Allow users to upload photos of the trails<br>
