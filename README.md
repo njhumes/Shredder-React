@@ -1,47 +1,29 @@
 # Shredder
-Scope: 
-    Features I want to add to my existing Shredder App
-        - Add multiple resorts other than just Keystone
-            - Just start with Colorado resorts and expand to the US if I have time
-            - Could start with Epic resorts vs Ikon Pass resorts
-        - Add favorites/rating trail feature
-        - Allow users to upload their own trails
-            - Add categories to trail model
-                - groomers
-                - off-piste backcountry
-                - hikable from resort
-                - bowls
-                - tree run
-                - moguls
-                - terrain park
-        - Allow users to display results based on trail category at each resort
-        - Expand the weather forecast to display more days of the week possibly with more data
-        - Allow users to upload photos of the trails
-        - Use firebase to have a chat/forum on each resort's page for users to chat, etc.
-        - Try to find an avalanche or dangerous conditions-like api that will render if that particular area is having an avalanche warning
-        - Revamp layout with boostrap or reactstrap adding more responsive features to improve overall appearance and demonstrate   react's capabilities
-    
-User Stories:
-    Our users our avid snowboarders/skiers looking to plan their day on the mountain, connect with other riders, scope out potential runs, evaluate different resorts in their area, and even plan vacations
-
-Wireframes: Sketch out what your core pages will look like and how they will work. Consider making a paper prototype to demonstrate and/or test key user interactions.
-Data Models: Draw out the models and any associations for your project in an entity relationship diagram (ERD).
-Milestones: Divide your work into parts - the most essential features for your MVP, features that are important but not essential, and features that can be saved for a later iteration. Create 3-5 major milestones with dates outlining when you expect essential features will be done.
-Feasibility Study: If you're using an external API or scraping a website, make sure you can get that data. If you're using a new language, framework, or tool, go through its getting started tutorial. We will ask to see your results.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Scope: <br>
+    Features I want to add to my existing Shredder App<br>
+        - Add multiple resorts other than just Keystone<br>
+            - Just start with Colorado resorts and expand to the US if I have time<br>
+            - Could start with Epic resorts vs Ikon Pass resorts<br>
+        - Add favorites/rating trail feature<br>
+        - Allow users to upload their own trails<br>
+            - Add categories to trail model<br>
+                - groomers<br>
+                - off-piste backcountry<br>
+                - hikable from resort<br>
+                - bowls<br>
+                - tree run<br>
+                - moguls<br>
+                - terrain park<br>
+        - Allow users to display results based on trail category at each resort<br>
+        - Expand the weather forecast to display more days of the week possibly with more data<br>
+        - Allow users to upload photos of the trails<br>
+        - Use firebase to have a chat/forum on each resort's page for users to chat, etc.<br>
+        - Try to find an avalanche or dangerous conditions-like api that will render if that particular area is having an avalanche warning<br>
+        - Revamp layout with boostrap or reactstrap adding more responsive features to improve overall appearance and demonstrate   react's capabilities<br>
+    <br><br>
+User Stories:<br>
+    Our users our avid snowboarders/skiers looking to plan their day on the mountain, connect with other riders, scope out potential runs, evaluate different resorts in their area, and even plan vacations<br><br>
+<br><br><br>
 
 
 A Snowboarding/Skiing app that allows users to rate &amp; review their favorite runs. Using data from a snow report API allows them to see current and upcoming snow conditions at their favorite mountains. <br>
