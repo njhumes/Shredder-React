@@ -114,7 +114,7 @@ class App extends Component {
 
  
 
-
+// set a div around each one with a class in order to specify a height of 100vh for reach part in order to create boostrap like sections
   render() {
     return (
       <div className="App">
