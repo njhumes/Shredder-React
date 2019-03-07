@@ -21,6 +21,7 @@ Scope: <br>
         - Try to find an avalanche or dangerous conditions-like api that will render if that particular area is having an avalanche warning<br>
         - Revamp layout with boostrap or reactstrap adding more responsive features to improve overall appearance and demonstrate   react's capabilities<br>
     <br><br>
+     - on any error pages have a ski rescue dog appear with the error
 User Stories:<br>
     Our users our avid snowboarders/skiers looking to plan their day on the mountain, connect with other riders, scope out potential runs, evaluate different resorts in their area, and even plan vacations<br><br>
 <br><br><br>

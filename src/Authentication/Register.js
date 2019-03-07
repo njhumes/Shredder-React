@@ -17,9 +17,10 @@ class Register extends Component {
     }
 
     handleRegistration = async (e) => {
+        console.log('tester')
         e.preventDefault();
         try {
-            const registrationResponse = await fetch(process.env.REACT_APP_BACKEND + 'user/register', {
+            const registrationResponse = await fetch('http://localhost:9000/user/register', {
                 method: 'POST',
                 credentials: 'include',
                 body: JSON.stringify(this.state),
@@ -36,6 +37,7 @@ class Register extends Component {
 
 
         } catch(err) {
+            console.log('err err ')
             console.log(err);
         }
     }

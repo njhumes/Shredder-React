@@ -9,7 +9,7 @@ const Login = (props) => {
   
 
 
-        console.log(props.state, 'login props.state')
+        // console.log(props.state, 'login props.state')
         return (
             // <div>test</div>
            props.state.logged ? <User userInfo={props.state} showUserModal={props.showUserModal} showEditModal={props.showEditModal} handleChange={props.handleChange} handleUserUpdate={props.handleUserUpdate} deleteUser={props.deleteUser}/> : 

@@ -5,6 +5,7 @@ import TrailContainer from './TrailContainer';
 import Login from './Authentication/Login';
 import Register from './Authentication/Register'
 import Header from './Header';
+import ResortContainer from './ResortContainer/ResortContainer';
 
 class App extends Component {
   constructor() {
@@ -82,7 +83,7 @@ class App extends Component {
     // console.log('handle login button works');
     try {
       console.log('handle login inside the try');
-      const loginResponse = await fetch(process.env.REACT_APP_BACKEND + 'user/login', {
+      const loginResponse = await fetch(`http://localhost:9000/user/login`, {
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify(this.state),
@@ -120,7 +121,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path='/' render={(props) => <Login state={this.state} showUserModal={this.showUserModal} showEditModal={this.showEditModal} handleChange={this.handleChange} handleUserUpdate={this.handleUserUpdate} deleteUser={this.deleteUser} handleLogin={this.handleLogin} />} />
+          <Route exact path='/' render={(props) => <ResortContainer />} />
+          <Route exact path='/user' render={(props) => <Login state={this.state} showUserModal={this.showUserModal} showEditModal={this.showEditModal} handleChange={this.handleChange} handleUserUpdate={this.handleUserUpdate} deleteUser={this.deleteUser} handleLogin={this.handleLogin} />} />
           <Route exact path='/trails' render={(props) => <TrailContainer username={this.state.username} favoriteTrails={this.state.favoriteTrails} /> } />
         </Switch>
         

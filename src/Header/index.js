@@ -10,7 +10,7 @@ const Header = () => {
                     <NavLink className='header-links' tag={Link} to='/trails'>Trails</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className='header-links' tag={Link} to='/'>Profile</NavLink>
+                    <NavLink className='header-links' tag={Link} to='/user'>Profile</NavLink>
                 </NavItem>
             
             </Nav>
