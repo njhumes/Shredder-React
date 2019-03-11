@@ -20,7 +20,7 @@ const ThreeDay = (props) => {
     // console.log(hour, 'hour');
     // console.log(typeof hour)
     // console.log(typeof time)
-    console.log(props.snowReport, 'on threeday.js')
+    // console.log(props.snowReport, 'on threeday.js')
     const convertTime = (unixTime) => {
         // Months array
         let months_arr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -58,7 +58,7 @@ const ThreeDay = (props) => {
     }
    
     const checkIcon = (i) => {
-        console.log('checkiconfunction')
+        // console.log('checkiconfunction')
         if(props.snowReport.daily.data[i].icon == 'snow'){
             return (
                 <img src={snow} alt='snow'/>
@@ -105,8 +105,8 @@ const ThreeDay = (props) => {
 
 
 
-    console.log(convertTime(props.snowReport.currently.time));
-    console.log(convertDate(props.snowReport.currently.time));
+    // console.log(convertTime(props.snowReport.currently.time));
+    // console.log(convertDate(props.snowReport.currently.time));
     return (
         <div className='day-main'><br/><br/><h2>Weather Report</h2><br/>
             

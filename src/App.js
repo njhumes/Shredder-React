@@ -23,9 +23,13 @@ class App extends Component {
       showUserModal: false,
       showEditModal: false,
       message: '',
+      resorts: []
     }
   }
 
+  componentDidMount() {
+    this.getResorts();
+  }
   showUserModal = () => {
     this.setState({
       showUserModal: !this.state.showUserModal
@@ -44,7 +48,7 @@ class App extends Component {
   handleUserUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(process.env.REACT_APP_BACKEND + this.state._id, {
+      const response = await fetch(process.env.REACT_APP_BACKEND + '/user/' + this.state._id, {
         method: 'PUT',
         credentials: 'include',
         body: JSON.stringify(this.state),
@@ -65,7 +69,7 @@ class App extends Component {
   }
 
   deleteUser = async (e) => {
-    const deleteResponse = await fetch(process.env.REACT_APP_BACKEND + this.state._id, {
+    const deleteResponse = await fetch(process.env.REACT_APP_BACKEND + '/user/' + this.state._id, {
       method: 'DELETE',
       credentials: 'include'
     })
@@ -83,7 +87,7 @@ class App extends Component {
     // console.log('handle login button works');
     try {
       console.log('handle login inside the try');
-      const loginResponse = await fetch(`http://localhost:9000/user/login`, {
+      const loginResponse = await fetch(process.env.REACT_APP_BACKEND + '/user/login', {
         method: 'POST',
         credentials: 'include',
         body: JSON.stringify(this.state),
@@ -112,18 +116,37 @@ class App extends Component {
       console.log(err);
     }
   }
-
+  getResorts = async () => {
+    try {
+      const resortResponse = await fetch('http://localhost:9000/resorts');
+      // console.log(resortResponse, 'app.js');
+      const parsedResorts = await resortResponse.json();
+      this.setState({
+        loaded: true,
+        resorts: parsedResorts.data
+      })
+      console.log(this.state,  'app state')
+    } catch (err) {
+      console.log(err)
+    }
+  }
  
-
+ 
 // set a div around each one with a class in order to specify a height of 100vh for reach part in order to create boostrap like sections
   render() {
+    const mappedResorts = this.state.resorts.map((mappedResort) => {
+      // console.log(mappedResort.name)
+  
+    })
+
+    console.log(this.state, 'app this.state')
     return (
       <div className="App">
         <Header />
         <Switch>
           <Route exact path='/' render={(props) => <ResortContainer />} />
           <Route exact path='/user' render={(props) => <Login state={this.state} showUserModal={this.showUserModal} showEditModal={this.showEditModal} handleChange={this.handleChange} handleUserUpdate={this.handleUserUpdate} deleteUser={this.deleteUser} handleLogin={this.handleLogin} />} />
-          <Route exact path='/trails' render={(props) => <TrailContainer username={this.state.username} favoriteTrails={this.state.favoriteTrails} /> } />
+          <Route exact path={`/resorts/:name`} render={(props) => <TrailContainer username={this.state.username} favoriteTrails={this.state.favoriteTrails} resorts={this.state.resorts}/> } />
         </Switch>
         
       </div>
