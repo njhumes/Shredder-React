@@ -1,10 +1,17 @@
 import React from 'react';
+import { Container, Col, Row, ListGroup, ListGroupItem } from 'reactstrap'
 
 const Profile = (props) => {
     console.log(props, 'props on Profile page')
     const userFavorites = props.showUser.favoriteTrails.map((trail) => {
         return(
-        <p>{trail.name}</p>
+            <ListGroup className='trail-block'>
+                <ListGroupItem key={trail._id}>
+                    <strong>Name:</strong> {trail.name}<br />
+                    <strong>Resort:</strong> {trail.resort}<br />
+                    <strong>Difficulty:</strong> {trail.difficulty}<br />
+                </ListGroupItem>
+            </ListGroup>
             
         )
     })
