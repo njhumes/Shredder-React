@@ -13,28 +13,11 @@ class ResortContainer extends Component {
             resorts: [],
             selectedResort: []
         }
-        // this.chooseResort = this.chooseResort.bind(this)
     }
 
     componentDidMount(){
         this.getResorts();
     }
-
-    // on this function set the selectedResort state to the one we clicked on
-    // this function will render the <trailcontainer with the selectedResort as its props to display it's info
-
-    // chooseResort = (name) => {
-    //     console.log(this.state.resorts)
-    //     this.setState({
-    //         selectedResort: this.state.resorts
-    //     })
-    //     console.log('chooseResort')
-    //     console.log(this.state, 'chooseResort button state')
-    //     console.log(this.state.selectedResort)
-    //     // return(
-    //     //     <TrailContainer  />
-    //     // )
-    // }
 
     getResorts = async () => {
         try {
@@ -83,7 +66,7 @@ class ResortContainer extends Component {
         return(
             <div>
                 <h1 className='title-heading'>Shredder</h1>
-                <ul>
+                <ul className='resort-links'>
                     {allResorts}
                 </ul>
                 {/* <ResortsList resorts={this.state.resorts} /> */}

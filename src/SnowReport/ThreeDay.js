@@ -12,15 +12,6 @@ import wind from '../Images/wind.png'
 import fog from '../Images/fog.png'
 
 const ThreeDay = (props) => {
-    // console.log(props.snowReport, 'props.snowReport on 3day');
-    // let today = new Date();
-    // const time = today.getHours() + today.getMinutes();
-    // const hour = today.getHours();
-    // console.log(time, 'time')
-    // console.log(hour, 'hour');
-    // console.log(typeof hour)
-    // console.log(typeof time)
-    // console.log(props.snowReport, 'on threeday.js')
     const convertTime = (unixTime) => {
         // Months array
         let months_arr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -103,8 +94,6 @@ const ThreeDay = (props) => {
         }
     }
 
-
-
     // console.log(convertTime(props.snowReport.currently.time));
     // console.log(convertDate(props.snowReport.currently.time));
     return (
@@ -133,8 +122,8 @@ const ThreeDay = (props) => {
                     {props.snowReport.daily.data[1].summary}<br /><br />  
                     <div className='snow-icon-temp'>  
                         {checkIcon(1)}<br/>
-                        High: {props.snowReport.daily.data[0].temperatureHigh}°F<br/>
-                        Low: {props.snowReport.daily.data[0].temperatureLow}°F
+                        High: {props.snowReport.daily.data[1].temperatureHigh}°F<br/>
+                        Low: {props.snowReport.daily.data[1].temperatureLow}°F
                     </div>
                     </Col>
 
@@ -143,8 +132,8 @@ const ThreeDay = (props) => {
                     {props.snowReport.daily.data[2].summary}<br /><br />
                     <div className='snow-icon-temp'>
                         {checkIcon(2)}<br />
-                        High: {props.snowReport.daily.data[0].temperatureHigh}°F<br />
-                        Low: {props.snowReport.daily.data[0].temperatureLow}°F
+                        High: {props.snowReport.daily.data[2].temperatureHigh}°F<br />
+                        Low: {props.snowReport.daily.data[2].temperatureLow}°F
                     </div>
                     </Col>
 
@@ -153,12 +142,22 @@ const ThreeDay = (props) => {
                     {props.snowReport.daily.data[3].summary}<br /><br />
                     <div className='snow-icon-temp'>
                         {checkIcon(3)}<br/>
-                        High: {props.snowReport.daily.data[0].temperatureHigh}°F<br/>   
-                        Low: {props.snowReport.daily.data[0].temperatureLow}°F
+                        High: {props.snowReport.daily.data[3].temperatureHigh}°F<br/>   
+                        Low: {props.snowReport.daily.data[3].temperatureLow}°F
+                    </div>
+                    </Col>
+                    <Col className='snow-col'>
+                        <p className='snow-date'> {convertDate(props.snowReport.daily.data[4].time)}</p>
+                        {props.snowReport.daily.data[4].summary}<br /><br />
+                        <div className='snow-icon-temp'>
+                            {checkIcon(3)}<br />
+                            High: {props.snowReport.daily.data[4].temperatureHigh}°F<br />
+                            Low: {props.snowReport.daily.data[4].temperatureLow}°F
                     </div>
                     </Col>
                 </Row>
             </Container>
+            <a href='https://darksky.net/poweredby/'>Powered By DarkSky</a>
             
         
             

@@ -83,3 +83,7 @@ font-family: 'Bangers', cursive;
 .login-page {
   height: 100vh
 }
+.resort-links li {
+  height: 400px;
+  width: 400px;
+}

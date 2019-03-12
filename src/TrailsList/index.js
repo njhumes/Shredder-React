@@ -37,7 +37,7 @@ const TrailList = (props) => {
                         {/* </Col> */}
                     </Row>
                 </Container><br/><br/>
-                <a href='https://darksky.net/poweredby/'>Powered By DarkSky</a>
+                
 
             
 
