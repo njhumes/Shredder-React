@@ -6,6 +6,7 @@ import Login from './Authentication/Login';
 import Register from './Authentication/Register'
 import Header from './Header';
 import ResortContainer from './ResortContainer/ResortContainer';
+import AddTrailContainer from './AddTrailContainer/AddTrailContainer';
 
 class App extends Component {
   constructor() {
@@ -103,7 +104,7 @@ class App extends Component {
         this.setState({
           logged: true, message: '', ...parsedLogin.info
         })
-        this.props.history.push('/trails');
+        this.props.history.push('/');
       } else {
           this.setState({
             message: 'Incorrect Username or Password'
@@ -147,6 +148,7 @@ class App extends Component {
           <Route exact path='/' render={(props) => <ResortContainer />} />
           <Route exact path='/user' render={(props) => <Login state={this.state} showUserModal={this.showUserModal} showEditModal={this.showEditModal} handleChange={this.handleChange} handleUserUpdate={this.handleUserUpdate} deleteUser={this.deleteUser} handleLogin={this.handleLogin} />} />
           <Route exact path={`/resorts/:name`} render={(props) => <TrailContainer username={this.state.username} favoriteTrails={this.state.favoriteTrails} resorts={this.state.resorts}/> } />
+          <Route exact path={`/trails`} render={(props) => <AddTrailContainer resorts={this.state.resorts}/>} />
         </Switch>
         
       </div>

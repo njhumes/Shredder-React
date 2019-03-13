@@ -17,16 +17,18 @@ const Profile = (props) => {
     })
     return (
         <div>
-            Your Profile
-            <ul>
-                <li>Email: {props.showUser.email}</li>
-                <li>Username: {props.showUser.username}</li>
-                <li>First Name: {props.showUser.firstName}</li>
-                <li>Last Name: {props.showUser.lastName}</li>
-                <li>Local Mountain: {props.showUser.localMountain}</li>
-                <li>Favorite Trails: {userFavorites}</li>
-
-            </ul>
+            <div class="container">
+                <div class="card border-0 shadow my-5">
+                    <div class="card-body p-5">
+            <h1 class="font-weight-light">Your Profile</h1>
+            <p class='lead'>Email: {props.showUser.email}</p>
+            <p class='lead'>Username: {props.showUser.username} </p>
+            <p class='lead'>First Name: {props.showUser.firstName} </p>
+            <p class='lead'>Last Name: {props.showUser.lastName} </p>
+            <p class='lead'>Favorite Trails: {userFavorites} </p>
+        </div>
+        </div>
+        </div>
         </div>
     )
 }

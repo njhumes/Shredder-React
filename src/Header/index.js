@@ -19,7 +19,7 @@ class Header extends Component{
     render() {
         return (
             <header>
-                <Nav tabs>
+                <Nav tabs id='heading-navbar'>
                     <NavItem>
                         <NavLink className='header-links' tag={Link} to='/'>Home</NavLink>
                     </NavItem>

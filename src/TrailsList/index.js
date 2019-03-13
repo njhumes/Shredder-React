@@ -1,6 +1,6 @@
 import React from 'react';
 import SnowReport from '../SnowReport';
-import { withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 // import { Document } from 'react-pdf';
 import { Container, Col, Row, ListGroup, ListGroupItem } from 'reactstrap'
 const TrailList = (props) => {
@@ -15,14 +15,10 @@ const TrailList = (props) => {
                         <strong>Difficulty:</strong> {trail.difficulty}<br />
                         <button onClick={props.addFavorite.bind(null, trail._id)}>Add to Favorites</button>
                     </ListGroupItem>
-                </ListGroup> : null
-
-            
-                        
+                </ListGroup> : null     
         )
     })
     console.log(props, 'trailL props')
-    // console.log(this.props, 'trailL this.props')
     return (
         <div>
             <h2>{props.selectedResort.name}</h2> <br/>
@@ -31,6 +27,18 @@ const TrailList = (props) => {
             <SnowReport resort={props.selectedResort}/><br/><br/>
                 <Container>
                     <h4>Trails</h4>
+                    {/* button link to addtrail container  pass in selectedResort props*/}
+                    <button> 
+                        <Link to={{
+                            pathname: `/trails`,
+                            state: {
+                                selectedResort: props.selectedResort
+                            }
+                        }}>
+                            Add Your Own Trail
+                        </Link>
+                    </button>
+                    
                     <Row>
                         {/* <Col xs="6" sm="4"> */}
                          {allTrails}

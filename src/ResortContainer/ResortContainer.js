@@ -46,29 +46,61 @@ class ResortContainer extends Component {
             })
         }
             return(
-                <button onClick={clickResort}>
-                <Link to={{
-                    pathname: `/resorts/${resort.name}`,
-                    state: {
-                        selectedResort: resort
-                    }
-                }}> 
-                        <li key={resort._id}>
-                            {resort.name}<br />
-                            <img src={resort.logo} alt='resort logo'/><br />
-                            {resort.pass}<br />
-                        </li>
-
-                </Link>
-                </button>
+                // <div class="container">
+                //     <div class="row">
+                //         <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-0 shadow">
+                                <button onClick={clickResort}>
+                                    <Link to={{
+                                        pathname: `/resorts/${resort.name}`,
+                                        state: {
+                                            selectedResort: resort
+                                        }
+                                    }}>
+                                        <p key={resort._id}>
+                                            <img className='resort-image' src={resort.logo} alt='resort logo' /><br />
+                                            <img className="pass-image" src={resort.passLogo}/><br /> 
+                                        </p>
+                                    </Link>
+                                </button>
+                                    {/* <div class="card-body text-center">
+                                    //    <h5 class="card-title mb-0">Team Member</h5>
+                                      //  <div class="card-text text-black-50">Web Developer</div>
+                                  //  </div> */}
+                             </div>
+                //         </div>
+                //     </div>
+                // </div>
+               
             )
         })
         return(
             <div>
-                <h1 className='title-heading'>Shredder</h1>
-                <ul className='resort-links'>
-                    {allResorts}
-                </ul>
+                <header class="masthead">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-12 text-center">
+                                {/* <h1 class="font-weight-heavy">Shredder</h1> */}
+                                <h1 className='title-heading'>Shreddr</h1>
+                                <h3 className="tag-line">Find Your Edge</h3>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <header style={{ "background-color": "#CED0CE" }} class=" text-center py-3 mb-4" >
+                    <div class="container">
+                        <h2 className='resorts-heading'>Resorts</h2>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md">
+
+                                {allResorts}
+
+                        </div>
+                    </div>
+                </div>
                 {/* <ResortsList resorts={this.state.resorts} /> */}
             </div>
         )

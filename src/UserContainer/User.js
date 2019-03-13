@@ -15,9 +15,9 @@ const User = (props) => {
     // console.log(props.handleChange())
     // console.log(e.currentTarget, 'e.currentTarget on User C');
     return(
-        <div>
-            Logged In!!!!
-            Welcome: {props.userInfo.username}
+        <div class='user-page'>
+            
+           <h3>Welcome: {props.userInfo.firstName}</h3>
             <button onClick={props.showUserModal.bind(null)}>Profile</button>
             <button onClick={props.showEditModal.bind(null)}>Edit</button>
 
