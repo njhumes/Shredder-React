@@ -21,7 +21,7 @@ class ResortContainer extends Component {
 
     getResorts = async () => {
         try {
-            const resortResponse = await fetch('http://localhost:9000/resorts');
+            const resortResponse = await fetch(process.env.REACT_APP_BACKEND + '/resorts');
             // console.log(resortResponse);
             const parsedResorts = await resortResponse.json();
             this.setState({
