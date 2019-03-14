@@ -17,11 +17,12 @@ const User = (props) => {
     return(
         <div class='user-page'>
             
-           <h3>Welcome: {props.userInfo.firstName}</h3>
+           <h3 className='profile-welcome'>Welcome {props.userInfo.firstName}</h3>
             <button onClick={props.showUserModal.bind(null)}>Profile</button>
             <button onClick={props.showEditModal.bind(null)}>Edit</button>
 
             {props.userInfo.showUserModal ? <Profile showUser={props.userInfo} /> : null}
+
             {props.userInfo.showEditModal ? <Edit editUser={props.userInfo} handleChange={props.handleChange.bind(this)} handleUserUpdate={props.handleUserUpdate.bind(this)} deleteUser={props.deleteUser.bind(this)} /> : null}
             
         </div>

@@ -114,13 +114,30 @@ h1, h2, h3, h4 {
   background-position: center;
   background-repeat: no-repeat;
 }
-/* .resort-image {
-  height: 300px;
-  width: 400px;
-} */
+/* .resort-grid {
+  /* height: 100vh; */
+  /* background-image: url('./Images/backgrounds/chris-leipelt-537577-unsplash.jpg'); */
+  /* background-size: cover;
+  background-position: center; */
+/* }  */
+.resort-image {
+  max-height: 100%;
+  max-width: 100%;
+}
 .pass-image {
-  height: 100px;
-  width: 300px;
+  max-height: 50%;
+  max-width: 50%;
+}
+.resort-card-button {
+  height: 300px;
+  width: 260px;
+}
+.resort-card {
+  height: 300px;
+  width: 260px;
+}
+.resort-card:hover {
+  transform: scale(1.1);
 }
 
 /* Input Forms */
@@ -226,4 +243,7 @@ h1, h2, h3, h4 {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+.profile-welcome {
+  font-size: 36px;
 }

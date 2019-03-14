@@ -21,7 +21,7 @@ class App extends Component {
       localMountain: '',
       favoriteTrails: [],
       logged: false,
-      showUserModal: false,
+      showUserModal: true,
       showEditModal: false,
       message: '',
       resorts: []

@@ -13,7 +13,9 @@ const TrailList = (props) => {
                         <strong>Name:</strong> {trail.name}<br />
                         <strong>Resort:</strong> {trail.resort}<br />
                         <strong>Difficulty:</strong> {trail.difficulty}<br />
-                        <button onClick={props.addFavorite.bind(null, trail._id)}>Add to Favorites</button>
+                        <strong>Category:</strong> {trail.category}<br />
+                        <strong>Notes:</strong> {trail.notes}<br />
+                        <button class='btn btn-md btn-secondary font-weight-bold mb-2' onClick={props.addFavorite.bind(null, trail._id)}>Add to Favorites</button>
                     </ListGroupItem>
                 </ListGroup> : null     
         )
@@ -22,7 +24,7 @@ const TrailList = (props) => {
     return (
         <div>
             <h2>{props.selectedResort.name}</h2> <br/>
-            {/* <iframe src="https://fatmap.com/48/Keystone/piste,freeride,ski_tour,hiking,biking/@39.595432,-105.9458659,2374.7635709,-26.5009809,157.6874283,3110.1123267,normal" frameBorder="" allowFullscreen="" width="750" height="450"></iframe> */}
+            <iframe src={props.selectedResort.fatmap} frameBorder="" allowFullscreen="" width="750" height="450"></iframe>
 
             <SnowReport resort={props.selectedResort}/><br/><br/>
                 <Container>
@@ -38,7 +40,6 @@ const TrailList = (props) => {
                             Add Your Own Trail
                         </Link>
                     </button>
-                    
                     <Row>
                         {/* <Col xs="6" sm="4"> */}
                          {allTrails}

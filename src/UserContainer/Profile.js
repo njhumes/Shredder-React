@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Col, Row, ListGroup, ListGroupItem } from 'reactstrap'
+import Edit from './Edit';
 
 const Profile = (props) => {
     console.log(props, 'props on Profile page')
@@ -15,6 +16,8 @@ const Profile = (props) => {
             
         )
     })
+
+
     return (
         <div>
             <div class="container">
@@ -26,6 +29,10 @@ const Profile = (props) => {
             <p class='lead'>First Name: {props.showUser.firstName} </p>
             <p class='lead'>Last Name: {props.showUser.lastName} </p>
             <p class='lead'>Favorite Trails: {userFavorites} </p>
+{/* 
+
+            <button onClick={props.editUser.showEditModal.bind(this)}>Edit</button>
+            {props.editUser.showEditModal ? <Edit editUser={props.userInfo} handleChange={props.handleChange.bind(this)} handleUserUpdate={props.handleUserUpdate.bind(this)} deleteUser={props.deleteUser.bind(this)} /> : null} */}
         </div>
         </div>
         </div>

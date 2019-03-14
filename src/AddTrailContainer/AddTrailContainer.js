@@ -81,7 +81,8 @@ class AddTrailContainer extends Component {
                                     <option value='Moguls'>Moguls</option>
                                     <option value='Tree Run'>Tree Run</option>
                                     <option value='Terrain Park'>Terrain Park</option>
-                                    <option value='Off-Piste/Backcountry'>Off-Piste/Backcountry</option>
+                                    <option value='Off-Piste'>Off-Piste</option>
+                                    <option value='Backcountry'>Backcountry</option>
                                 </select>
                                 <label>Category</label>
                             </div>

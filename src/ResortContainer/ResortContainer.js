@@ -48,9 +48,9 @@ class ResortContainer extends Component {
             return(
                 // <div class="container">
                 //     <div class="row">
-                //         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-0 shadow">
-                                <button onClick={clickResort}>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-0 shadow resort-card">
+                                <button class='resort-card-button' onClick={clickResort}>
                                     <Link to={{
                                         pathname: `/resorts/${resort.name}`,
                                         state: {
@@ -58,7 +58,7 @@ class ResortContainer extends Component {
                                         }
                                     }}>
                                         <p key={resort._id}>
-                                            <img className='resort-image' src={resort.logo} alt='resort logo' /><br />
+                                            <img className='resort-image' src={resort.logo} alt='resort logo' /><br/><br/>
                                             <img className="pass-image" src={resort.passLogo}/><br /> 
                                         </p>
                                     </Link>
@@ -68,7 +68,7 @@ class ResortContainer extends Component {
                                       //  <div class="card-text text-black-50">Web Developer</div>
                                   //  </div> */}
                              </div>
-                //         </div>
+                        </div>
                 //     </div>
                 // </div>
                
@@ -92,12 +92,10 @@ class ResortContainer extends Component {
                         <h2 className='resorts-heading'>Resorts</h2>
                     </div>
                 </header>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md">
-
-                                {allResorts}
-
+                <div className='resort-grid'> 
+                    <div class="container">
+                        <div class="row">
+                            {allResorts}
                         </div>
                     </div>
                 </div>
