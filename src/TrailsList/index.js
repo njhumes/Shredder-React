@@ -24,9 +24,8 @@ const TrailList = (props) => {
     return (
         <div>
             <h2>{props.selectedResort.name}</h2> <br/>
-            <iframe src={props.selectedResort.fatmap} frameBorder="" allowFullscreen="" width="750" height="450"></iframe>
-
             <SnowReport resort={props.selectedResort}/><br/><br/>
+            <iframe src={props.selectedResort.fatmap} frameBorder="" allowFullscreen="" width="750" height="450"></iframe>
                 <Container>
                     <h4>Trails</h4>
                     {/* button link to addtrail container  pass in selectedResort props*/}
