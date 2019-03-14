@@ -23,28 +23,32 @@ const TrailList = (props) => {
     console.log(props, 'trailL props')
     return (
         <div>
-            <h2>{props.selectedResort.name}</h2> <br/>
-            <SnowReport resort={props.selectedResort}/><br/><br/>
-            <iframe src={props.selectedResort.fatmap} frameBorder="" allowFullscreen="" width="750" height="450"></iframe>
+            <h2 className='resorts-heading'>{props.selectedResort.name}</h2>
+            <div className='top-weather'>
+                <SnowReport resort={props.selectedResort}/><br/><br/>
+            </div>
+            <div className='bottom-trails'>
+                <h2>Trails</h2>
+                <iframe src={props.selectedResort.fatmap} frameBorder="" allowFullscreen="" width="750" height="450"></iframe> <br/><br/>
                 <Container>
-                    <h4>Trails</h4>
-                    {/* button link to addtrail container  pass in selectedResort props*/}
-                    <button> 
+                    <button className='btn btn-md btn-success font-weight-bold mb-2 addTrail-btn'>
                         <Link to={{
                             pathname: `/trails`,
                             state: {
                                 selectedResort: props.selectedResort
                             }
                         }}>
-                            Add Your Own Trail
+                            <span className='addTrail-btn'>Upload Your Own Trail</span>
                         </Link>
                     </button>
                     <Row>
                         {/* <Col xs="6" sm="4"> */}
-                         {allTrails}
+                        {allTrails}
                         {/* </Col> */}
                     </Row>
-                </Container><br/><br/>
+                </Container><br /><br />
+            </div>
+            
                 
 
             

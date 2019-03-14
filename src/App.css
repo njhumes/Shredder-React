@@ -127,6 +127,9 @@ h1, h2, h3, h4 {
 .pass-image {
   max-height: 50%;
   max-width: 50%;
+  /* position: absolute; */
+  /* bottom: 0 auto; */
+  /* text-align: center; */
 }
 .resort-card-button {
   height: 300px;
@@ -140,6 +143,17 @@ h1, h2, h3, h4 {
   transform: scale(1.1);
 }
 
+/* .top-weather {
+  height: 100vh;
+  background-image: url('./Images/backgrounds/patrol.jpeg');
+}
+.bottom-trails {
+  height: 100vh;
+} */
+.addTrail-btn {
+  color: white;
+  text-align: center;
+}
 /* Input Forms */
 :root {
   --input-padding-x: 1.5rem;
