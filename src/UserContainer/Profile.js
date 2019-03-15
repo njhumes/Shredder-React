@@ -17,7 +17,6 @@ const Profile = (props) => {
         )
     })
 
-
     return (
         <div>
             <div class="container">
