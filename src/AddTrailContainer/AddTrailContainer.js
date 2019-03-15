@@ -68,15 +68,18 @@ class AddTrailContainer extends Component {
 
                             <div>
                                 <select name='difficulty' onChange={this.handleChange} class="form-control" id='selectDifficulty'>
+                                    <option value="" disabled selected>Difficulty</option>
                                     <option value='Green'>Green</option>
                                     <option value='Blue'>Blue</option>
                                     <option value='Black Diamond'>Black Diamond</option>
                                     <option value='Double Black'>Double Black</option>    
                                 </select>
-                                <label for='selectDifficulty'>Difficulty</label>
-                            </div>
+                               
+                            </div><br/>
                             <div>
+                                {/* <label>Category</label> */}
                                 <select name='category' onChange={this.handleChange} class="form-control">
+                                    <option value="" disabled selected>Category</option>
                                     <option value='Groomers'>Groomers</option>
                                     <option value='Moguls'>Moguls</option>
                                     <option value='Tree Run'>Tree Run</option>
@@ -84,11 +87,11 @@ class AddTrailContainer extends Component {
                                     <option value='Off-Piste'>Off-Piste</option>
                                     <option value='Backcountry'>Backcountry</option>
                                 </select>
-                                <label>Category</label>
-                            </div>
+                                
+                            </div><br/>
                             <div class="form-label-group">
-                                <textarea name='notes' onChange={this.handleChange}></textarea>
-                                <label>Notes</label>
+                                {/* <p>Notes</p> */}
+                                <textarea name='notes' onChange={this.handleChange} placeholder='Additional Comments' rows='4' cols='45'></textarea>
                             </div>
                             <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Upload Trail</button>
                             
